@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời chúc 8/3 cho cậu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+        h1 {
+            color: #ff4b5c;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .btn {
+            background: #ff4b5c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #d43f4d;
+        }
+        #password-section {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+        <h1>Nhập mật khẩu</h1>
+        <div id="password-section">
+            <input type="password" id="password" placeholder="Nhập mật khẩu" />
+            <button class="btn" onclick="checkPassword()">Mở</button>
+        </div>
+        <div id="message" style="display: none;">
+            <h1>Chúc mừng 8/3!</h1>
+            <p>Tôi chúc cậu luôn luôn xinh đẹp, học tập tốt và luôn luôn tràn đầy hạnh phúc:)</p>
+            <button class="btn" onclick="playMusic()">Nhận</button>
+        </div>
+    </div>
+    <audio id="music" src="your-music-file.mp3"></audio>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === "foryou") {
+                document.getElementById('password-section').style.display = 'none';
+                document.getElementById('message').style.display = 'block';
+            } else {
+                alert('Mật khẩu chớt quớt luôn, nhập lại đi=)');
+            }
+        }
+        
+        function playMusic() {
+            document.getElementById('music').play();
+            alert('Chúc cậu có một ngày 8/3 thật vui vẻ 💖');
+        }
+    </script>
+</body>
+</html>
+
